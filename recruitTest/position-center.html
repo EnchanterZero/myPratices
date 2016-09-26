@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>各种居中</title>
+    <style>
+        /*万能的position大法
+
+这个方法可以说真的是万能的。当你为一个元素无法居中而困扰的时候，可以果断的使用他，而且几乎没有后遗症，绝对是前端工程师们居家旅行必备的手段之一。
+具体的做法很简单，首先给父元素写上positon:relative，这么做是为了给子元素打上position:absolute的时候不会被定位到外太空去。
+接下去，写上子元素的height和width，这个似乎是必须的，某些浏览器在解析的时候如果没有这2个值的话会出现意想不到的错位。
+接着就是整个方法的核心，给子元素再打上top:50%;left:50%以及margin-top:一半的height值的的负数;margin-left:一半的weight值的负数。
+整理一下之后，可能你会给你的子元素写上这样的css（当然，父元素也要先写上width和height）*/
+        .green-box  {
+            position:relative;
+            border: solid 3px green;
+            height: 300px;
+            width: 300px;
+            top: 0; left: 0; bottom: 0; right: 0;
+        }
+        .red-box  {
+            position: relative;
+            border: solid 3px red;
+            height: 100px;
+            width:  100px;
+            top:50%;
+            left: 50%;
+            margin-left:-50px;
+            margin-top: -50px;
+        }
+        .red-box:hover {
+            position: absolute;
+            border: solid 3px sandybrown;
+            height: 100px;
+            width:  100px;
+            top:50%;
+            left: 50%;
+            margin-left:-50px;
+            margin-top: -50px;
+        }
+    </style>
+</head>
+<div class="green-box">
+    <div class="red-box">
+    </div>
+</div>
+<br/>
+<div class="green-box">
+
+</div>
+</body>
+<script>
+    window.onload = function () {
+        alert('window.onload');
+//        var list = document.getElementsByTagName("li");
+//        for(var i=0;i<list.length;i++){
+//            (function (i) {
+//                list[i].onclick = function () {
+//                    alert(list[i].innerHTML)
+//                }
+//            })(i);
+//        }
+    }
+    document.body.onload = function () {
+        alert('document.body.onload');
+    }
+</script>
+</html>
+

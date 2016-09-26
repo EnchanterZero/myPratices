@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>task2</title>
+    <!--
+    针对设计稿样式进行合理的HTML架构，包括以下但不限于：
+    掌握常用HTML标签的含义、用法
+    能够基于设计稿来合理规划HTML文档结构
+    理解语义化，合理地使用HTML标签来构建页面
+    掌握基本的CSS编码，包括以下但不限于：
+    了解CSS的定义、概念、发展简史
+    掌握CSS选择器的含义和用法
+    实践并掌握CSS的颜色、字体、背景、边框、盒模型、简单布局等样式的定义方式
+    -->
+    <style>
+        body {
+            background-color: gainsboro;
+            padding: 0;
+            margin: 0;
+        }
+        header{
+
+            background-color: darkslategrey;
+            height: 70px;
+            padding: 0 10px 0 30px;
+        }
+        header img{
+            margin-top:-10px;
+            width: 150px;
+        }
+        header ul{
+            margin-top: 25px;
+            float: right;
+        }
+        header li{
+            float: left;
+            margin-left: 20px;
+        }
+        header li a{
+            font-family: 微软雅黑;
+            font-size: small;
+            text-decoration: none;
+        }
+        header li a:link{
+            color: white;
+        }
+        header li a:visited{
+            color: grey;
+        }
+        article{
+            margin: 30px auto 0px auto;
+            padding: 15px 10px 15px 10px;
+            background-color: white;
+            box-shadow: 5px 5px 8px  ;
+            width: 1200px;
+        }
+    </style>
+</head>
+<body>
+<header class="top_nav">
+    <img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/logo_white_fe6da1ec.png"/>
+    <ul>
+        <li><a href="#">导航链接1</a></li>
+        <li><a href="#">导航链接2</a></li>
+        <li><a href="#">导航链接3</a></li>
+        <li><a href="#">导航链接4</a></li>
+    </ul>
+</header>
+
+<article>
+    <h2>文章一级标题</h2>
+    <h3>文章二级标题</h3>
+    <p>文章作者 文章发表时间</p>
+    <p>这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，换行</p>
+    <p>这是又一个段落，这是又一个段落，这是又一个段落，这是又一个段落，这是又一个段落，这是又一个段落，这是又一个段落，这是又一个段落，换行</p>
+    <p>这还是一个段落，这还是一个段落，这还是一个段落，这还是一个段落，<a
+            href="http://ife.baidu.com">这里有段连接</a>这还是一个段落，这还是一个段落，这还是一个段落，<strong>这里是粗体字</strong>，这还是一个段落，这还是一个段落，这还是一个段落，这还是一个段落，这还是一个段落，这还是一个段落，这还是一个段落，
+    </p>
+    <img src="../public/20150919170714_dsEhj.gif"/>
+    <p>这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，换行</p>
+    <p>这是又一个段落，这是又一个段落，这是又一个段落，这是又一个段落，这是又一个段落，这是又一个段落，这是又一个段落，这是又一个段落，换行</p>
+    <p>这还是一个段落，这还是一个段落，这还是一个段落，这还是一个段落，<a
+            href="http://ife.baidu.com">这里有段连接</a>这还是一个段落，这还是一个段落，这还是一个段落，<strong>这里是粗体字</strong>，这还是一个段落，这还是一个段落，这还是一个段落，这还是一个段落，这还是一个段落，这还是一个段落，这还是一个段落，
+    </p>
+</article>
+<article>
+    <h2>另一篇文章一级标题</h2>
+    <h3>文章二级标题</h3>
+    <p>文章作者 文章发表时间</p>
+    <p>这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，换行</p><br/>
+    <p>这是又一个段落，这是又一个段落，这是又一个段落，这是又一个段落，这是又一个段落，这是又一个段落，这是又一个段落，这是又一个段落，换行</p><br/>
+    <p>这还是一个段落，这还是一个段落，这还是一个段落，这还是一个段落，<a
+            href="http://ife.baidu.com" target="_blank">这里有个连接可以打开新窗口</a>这还是一个段落，这还是一个段落，这还是一个段落，<strong>这里是粗体字</strong>，这还是一个段落，这还是一个段落，这还是一个段落，这还是一个段落，这还是一个段落，这还是一个段落，这还是一个段落，
+    </p>
+    <img src="../public/20150919170714_dsEhj.gif"/>
+    <ul>
+        <li>列表项目1</li>
+        <li>列表项目2</li>
+        <li>列表项目3</li>
+        <li>列表项目4</li>
+    </ul>
+</article>
+<article>
+    <h2>图片</h2>
+    <div class="img_box">
+        <p>好看的图片</p>
+        <img src="../public/20150919170714_dsEhj.gif"/><br/>
+    </div>
+    <div class="img_box">
+        <p>好看的图片</p>
+        <img src="../public/20150919170714_dsEhj.gif"/><br/>
+    </div>
+    <div class="img_box">
+        <p>好看的图片</p>
+        <img src="../public/20150919170714_dsEhj.gif"/><br/>
+    </div>
+    <div class="img_box">
+        <p>好看的图片</p>
+        <img src="../public/20150919170714_dsEhj.gif"/><br/>
+    </div>
+</article>
+<h2>最后一篇文章一级标题</h2>
+<h3>文章二级标题</h3>
+<p>文章作者 文章发表时间</p>
+<ol>
+    <li>排名1</li>
+    <li>排名2</li>
+    <li>排名3</li>
+</ol>
+<h2>下面是一个表格，给表格加一个border="1"好让你看出是表格</h2>
+<table border="1">
+    <thead>
+    <tr>
+        <td>表头</td>
+        <td>表头</td>
+        <td>表头</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>表内容单元格</td>
+        <td>表内容单元格</td>
+        <td><a>操作</a></td>
+    </tr>
+    <tr>
+        <td>表内容单元格</td>
+        <td>表内容单元格</td>
+        <td><a>操作</a></td>
+    </tr>
+    <tr>
+        <td>表内容单元格</td>
+        <td>表内容单元格</td>
+        <td><a>操作</a></td>
+    </tr>
+    <tr>
+        <td>表内容单元格</td>
+        <td>表内容单元格</td>
+        <td><a>操作</a></td>
+    </tr>
+    <tr>
+        <td>总计</td>
+        <td colspan="2">1000</td>
+    </tr>
+    </tbody>
+</table>
+<aside>
+    <h2>这里以后是侧栏，这是侧栏标题</h2>
+    <div class="input_group">
+        <div class="input_item">
+            <label>请输入邮箱：</label><input type="text" placeholder="这是一个文本输入框"><br/>
+            <p>邮箱地址请按格式输入</p>
+        </div>
+
+        <div class="input_item">
+            <label>请输入密码：</label><input type="text" placeholder="这是一个文本输入框">
+        </div>
+        <div class="input_item">
+            <label>请重复输入密码：</label><input type="text" placeholder="这是一个文本输入框"><br/>
+            <p>密码请为6-16位英文数字</p>
+        </div>
+
+        <div class="input_item">
+            <label>性别：</label>
+            <input type="radio" id="r1" name="sex" checked/> <label for="r1">男</label>
+            <input type="radio" id="r2" name="sex"/> <label for="r2">女</label>
+        </div>
+        <div class="input_item">
+            <label>城市：</label>
+            <select>
+                <option selected>Beijing
+                <option>Bananas
+                <option>Cherries
+            </select>
+        </div>
+        <div class="input_item">
+            <label>爱好：</label>
+            <input type="checkbox"/> <label for="r1">运动</label>
+            <input type="checkbox"/> <label for="r1">艺术</label>
+            <input type="checkbox"/> <label for="r1">科学</label>
+        </div>
+        <div class="input_item">
+            <label>个人描述：</label>
+            <textarea>这是一个多行输入框，输入您的个人描述</textarea>
+        </div>
+    </div>
+    <button>确认提交</button>
+</aside>
+<footer>
+    <p>版权所有@</p>
+</footer>
+</body>
+</html>
