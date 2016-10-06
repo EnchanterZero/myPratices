@@ -45,11 +45,9 @@ function search(a) {
       a=(a+1)%p.length;
     }
   }
-  if (i == p.length) {
-    console.log('fond:' + a)
-    return a;
-  }
+  console.log('fond:' + a)
+  return a;
 
 }
 
-console.log(search(4));
+console.log(search(6));

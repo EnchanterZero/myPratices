@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task6</title>
+    <style>
+        body {
+            border: 1px solid black;
+            width: 890px;
+            height: 1386px;
+            padding: 0px 44px;
+        }
+
+        header {
+            margin-bottom: 40px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .header_red_box {
+            float: left;
+            position: relative;
+            width: 110px;
+            height: 61px;
+            background-color: #d45d5c;
+        }
+
+        .header_words {
+            position: relative;
+            margin: 0 0 0 5px;
+            top: 45px;
+            color: #ffffff;
+            font: 12px "黑体";
+        }
+
+        .header_date {
+            margin: 47px 0 0 0;
+            float: right;
+            color: #d45d5c;
+            font: 12px "黑体";
+        }
+
+        .header_line {
+            margin: 0;
+            clear: both;
+            width: 892px;
+            height: 2px;
+            background-color: #938e8c;
+        }
+
+        .article1 .main_image {
+            position: relative;
+            width: 641px;
+            height: 301px;
+            float: left;
+        }
+
+        .article1 .main_image .before {
+            display: block;
+            content: "";
+            width: 191px;
+            height: 301px;
+            position: absolute;
+            background-color: green;
+            opacity: 0.3;
+        }
+
+        .article1 .main_image .after {
+            display: block;
+            content: "";
+            width: 191px;
+            height: 301px;
+            position: absolute;
+            right: 0px;
+            background-color: red;
+            opacity: 0.3;
+        }
+
+        .article1 .left {
+            float: right;
+            width: 203px;
+            margin-left: 44px;
+        }
+
+        .article1 .left .top_line {
+            background-color: #cc8091;
+            height: 2px;
+            width: 203px;
+            margin-bottom: 15px;
+        }
+
+        .article1 .words_about {
+            width: 72px;
+        }
+
+        .article1 .words_technology {
+            width: 134px;
+        }
+
+        .article1 .words_firstCap {
+            margin-bottom: 3px;
+            font: 19px "微软雅黑";
+            color: #000000;
+            height: 26px;
+            border-bottom: solid 2px grey;
+        }
+
+        .article1 .words_firstCap span {
+            display: inline-block;
+            margin-top: -2px;
+            font-size: 24px;
+        }
+
+        .article1 .words_small_grey {
+            font: 12px "楷体";
+            color: #676767;
+            width: 203px;
+        }
+
+        .article1 .words_big_700 {
+            margin-left: -10px;
+            font: oblique 116px "微软雅黑";
+            color: #75b86b;
+            margin-bottom: -19px;
+        }
+
+        .article1 .words_32 {
+            float: left;
+            font: 55px "微软雅黑";
+            color: #cc8091;
+            margin-right: 3px;
+        }
+
+        .article1 .words_css {
+            padding: 0 0 -5px 0;
+        }
+
+        .article1 .words_css .first {
+            margin: 0;
+            padding-top: 22px;
+            font: 21px "微软雅黑";
+            color: #cc8091;
+        }
+
+        .article1 .words_css .second {
+            margin: -5px 0 -50px 0;
+            font: 12px "微软雅黑";
+            color: #909090;
+        }
+
+        .article1 .content {
+            clear: both;
+            padding-top: 10px;
+            height: 220px;
+            opacity: 0.7;
+        }
+
+        .article1 .content .paragraph {
+            float: left;
+            margin-right: 16px;
+            width: 200px;
+            font: 12px 宋体;
+            color: #767777
+        }
+
+        .article1 .content .paragraph {
+            float: left;
+            margin-right: 16px;
+            font: 12px 宋体;
+            color: #767777
+        }
+
+        .article1 .content .title {
+            font: 16px 微软雅黑;
+            text-decoration: underline;
+            opacity: 1;
+        }
+
+        .article1 .content .what {
+            color: #418c59;
+        }
+
+        .article1 .content .when {
+            color: #d2994f;
+        }
+
+        .article1 .content .how {
+            color: #cc6780;
+        }
+
+        .article1 .content ul {
+            list-style: none;
+            margin: 30px 0 0 -38px;
+        }
+
+        .article1 .content span {
+            font: oblique 12px 微软雅黑;
+            color: #cd4a48;
+        }
+
+        .article2 .left {
+            /*float: left;*/
+            width: 415px;
+            margin: 0;
+        }
+
+        .article2 .left .title_en {
+            line-height: 70%;
+            font: 42px 黑体;
+            color: #11456b;
+            font-weight: bold;
+            padding: 0;
+            margin: -5px 0 -5px 0;
+        }
+
+        .article2 .left .tail {
+            height: 42px;
+            font: 42px 黑体;
+            color: #11456b;
+            font-weight: bold;
+            padding: 0;
+        }
+
+        .article2 .left .title_en .head {
+            display: inline-block;
+            height: 72px;
+            font: oblique 72px 黑体;
+            color: #f5e327;
+            font-weight: bold;
+            margin-right: 30px;
+            margin-bottom: -25px;
+        }
+
+        .article2 .left .title_ch {
+            margin: 16px 0;
+            font: 33px 黑体;
+            color: #11456b;
+            font-weight: bold;
+        }
+
+        .article2 .left .bottom_line {
+            width: 415px;
+            height: 2px;
+            margin-bottom: 5px;
+            background-color: #11456b;
+        }
+
+        .article2 .left .content {
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            color: #767777;
+            font: 12px 宋体;
+        }
+
+        .article2 .left .content .words {
+            padding-top: 12px;
+            line-height: 16px;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        .article2 .left .content .img_before {
+            float: right;
+            height: 100px;
+            width: 0;
+        }
+
+        .article2 .left .content img {
+            margin: 12px 2px 12px 12px;
+            float: right;
+            clear: both;
+            height: 300px;
+            width: 185px;
+        }
+
+        .article2 .left .content .first {
+            margin: 0 9px 0 -2px;
+            float: left;
+            color: #f5e327;
+            font: 70px 微软雅黑;
+        }
+
+        .article2 .right {
+            padding-top: 20px;
+            float: right;
+        }
+
+        .article2 .right .top {
+            position: relative;
+        }
+
+        .article2 .right .top .cover {
+            position: absolute;
+            bottom: 2px;
+            background: rgba(99, 99, 99, 0.5);
+            width: 458px;
+            height: 61px;
+        }
+
+        .article2 .right .top .cover p {
+            color: #ffffff;
+            font: 26px 微软雅黑;
+            margin: 8px auto 8px 40px;
+            height: 44px;
+            padding-left: 10px;
+            border-left: 3px solid #72b16a;
+        }
+
+        .article2 .right .top .cover p span {
+            color: #72b16a;
+            font: oblique 12px 微软雅黑;
+            margin: auto auto auto 10px;
+            height: 44px;
+        }
+
+        .article2 .right .top img {
+            width: 458px;
+            height: 275px;
+        }
+
+        .article2 .right .bottom {
+            width: 458px;
+            margin-top: 20px;
+            padding-top: 5px;
+            background-color: #eeeed6;
+        }
+
+        .article2 .right .bottom ul {
+            font: 16px 宋体;
+            color: #5a5b5b;
+            list-style: square;
+            height: 105px;
+        }
+
+        .article2 .right .bottom li {
+            margin-top: 20px;
+        }
+
+        .article2 .right .bottom li span {
+            font: oblique 12px 宋体;
+            color: #5a5b5b;
+        }
+
+        .article2 .right .bottom_bottom {
+            padding-top: 5px;
+        }
+
+        .article2 .right .bottom_bottom .bottom_right {
+            float: right;
+            width: 180px;
+        }
+
+        .article2 .right .bottom_bottom .bottom_left {
+            background-color: #d55d5c;
+            padding-top: 45px;
+            height: 130px;
+            width: 260px;
+        }
+
+        .article2 .right .bottom_bottom .bottom_left .big_0 {
+            margin: -30px 5px 10px 5px;
+            height: 86px;
+            padding: 0;
+            float: left;
+            font: 110px 微软雅黑;
+            color: #ffffff;
+        }
+        .article2 .right .bottom_bottom .bottom_left .line {
+            float: left;
+            /*margin-top: 40px;*/
+            margin-right: 10px;
+            width: 2px;
+            height: 86px;
+            background-color: #ffffff;
+
+        }
+        .article2 .right .bottom_bottom .bottom_left .one_two {
+            margin-top: 0px;
+            font: oblique 21px 黑体;
+            line-height: 24px;
+            color: #ffffff;
+
+        }
+        .article2 .right .bottom_bottom .bottom_left .three_four_five {
+            margin-top: -20px;
+            font: oblique 21px 黑体;
+            line-height: 24px;
+            color: #ffffff;
+
+        }
+        .article2 .right .bottom_bottom .bottom_left .hello_world {
+            margin-top: -13px;
+            font: 12px 黑体;
+            line-height: 11px;
+            color: #ffffff;
+
+        }
+        .article2 .right .bottom_bottom .bottom_right {
+            margin-top: 15px;
+            font: oblique 14px 黑体;
+            line-height: 16px;
+            color: #5a5b5b;
+
+        }
+        .article2 .right .bottom_bottom .bottom_right .start {
+            float: left;
+            display: inline-block;
+            margin: 30px 10px -20px -40px;
+            font: 72px 黑体;
+            height: 12px;
+            line-height: 16px;
+            color: #d45d5c;
+
+        }
+        .article2 .right .bottom_bottom .bottom_right .top_space {
+            float: right;
+            display: inline-block;
+            width: 0px;
+            height: 110px;
+
+        }
+        .article2 .right .bottom_bottom .bottom_right .end {
+            clear: both;
+            float: right;
+            margin: 0px -20px 0px 0px;
+            height: 12px;
+            font: 72px 黑体;
+            line-height: 16px;
+            color: #d45d5c;
+
+        }
+        footer {
+            padding-top: 40px;
+        }
+
+        footer .footer_line {
+            width: 892px;
+            height: 1px;
+            background-color: #938e8c;
+        }
+        footer p {
+            margin-top: 2px;
+            float: right;
+            font: 12px 黑体;
+            color: #d45d5c;
+
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header_red_box">
+        <p class="header_words">ief.baidu.com</p>
+    </div>
+    <p class="header_date">2016.03</p>
+    <div class="header_line"></div>
+</header>
+<main>
+    <article class="article1">
+        <div class="main_image">
+            <div class="before"></div>
+            <div class="after"></div>
+            <img src="../public/task6-1.png">
+        </div>
+        <div class="left">
+            <div class="top_line"></div>
+            <div class="words_firstCap words_about"><span>A</span>BOUT</div>
+            <div class="words_firstCap words_technology"><span>T</span>ECHNOLOGY</div>
+            <div class="words_small_grey">About technology About technology About technology</div>
+            <div class="words_big_700">700</div>
+            <div>
+                <div class="words_32">3.2</div>
+                <div class="words_css"><p class="first">css</p>
+                    <p class="second">cssssccsccscssc</p></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="paragraph">
+                <p class="title what">What</p>
+                <p>前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端
+                    前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端
+                    前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端
+                    前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端</p>
+            </div>
+            <div class="paragraph">
+                <p class="title when">When</p>
+                <p>前端前端前端前端前端前端前端前端前端前端前端前端
+                    前端前端前端前端前端前端前端前端前端前端前端前端
+                    前端前端前端前端前端前端前端前端前端前端前端前端
+                    前端前端前端前端前端前端前端前端前端前</p>
+            </div>
+            <div class="paragraph">
+                <p class="title how">How</p>
+                <p>前端前端前端前端前端前端前端前端前端前端前端</p>
+                <ul>
+                    <li>What-------- <span>40%</span></li>
+                    <li>What-------- <span>30%</span></li>
+                    <li>What-------- <span>30%</span></li>
+                </ul>
+            </div>
+        </div>
+    </article>
+    <article class="article2">
+        <div class="right">
+            <div class="top">
+                <div class="cover">
+                    <p class="title">前端技术<span>前端技术前端技术</span></p>
+                </div>
+                <img src="../public/task6-2.png"/>
+            </div>
+            <div class="bottom">
+                <ul>
+                    <li>前端前端前端前端前端前端......................<span>前端</span></li>
+                    <li>前端前端前端前端.............................<span>前端前</span></li>
+                    <li>前端前端前端前端前端前端前端..................<span>前端</span></li>
+                </ul>
+                <div class="bottom_bottom">
+                    <div class="bottom_right">
+                    <p class="start">“</p>
+                    <p class="top_space">“</p>
+                    <p class="end">”</p>
+                    <p>world hello world hello world hello world hello world hello
+                        world hello world hello world hello world hello world hello world hello world hello</p>
+                    </div>
+                    <div class="bottom_left">
+                        <p class="big_0">0</p>
+                        <div class="line"></div>
+                        <p class="one_two">ONE TWO</p>
+                        <p class="three_four_five">THREE FOUR FIVE</p>
+                        <p class="hello_world">hello world hello world hello world</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="left">
+            <div class="title">
+                <p class="title_en"><span class="head">THE</span>TECHNOLOGY </p>
+                <p class="title_en tail">OF FRONT</p>
+                <p class="title_ch">前端技术领域</p>
+                <div class="bottom_line"></div>
+            </div>
+            <div class="content">
+                <div class="img_before"></div>
+                <p class="first">前</p>
+                <img src="../public/task6-3.png">
+                <p class="words">
+                    端前端前端端端前端前端前端前端前端前端前端前端前端前端前端端前端前端端端前端前端前端前端前端前端前端前端前端前端前端端前端前端端端前端前端前端前端前端前端前端前端前端前端前端。端前端前端前端前端前端前端前端。端前端前端前端前端前端端前端前端前端前端前端端前端前端前端前端前端端前端前端前端前端前端端前端前端前端前端前端端前端前端前端前端前端端前端前端前端前端前端端前端前端前端前端前端。<br/>
+                    &nbsp&nbsp前端前端前端前端前端前端前端前端前端前端前端前。端前端前端前端前端前端前端前端。端前端前端前端前端前端端前端前端前端前端前端端前端前端前端前端前端端前端前端前端前端前端端前端前端前端前端前端端前端前端前端前端前端端前端前端前端前端前端端前端前端前端前端前端。端前端前端前端前端前端前端前端。端前端前端前端前端前端端前端前端前端前端前端端前端前端前端前端前端端前端前端前端前端前端端前端前端前端前端前端端前端前端前端前端前端端前端前端前端前端前端端前端前端前端前端前端。前端端前端前端前端前端前端端前端前端前端前端前端端前端前端前端前端前端。前端端前端前端前端前端前端端前端前端前端前端前端端前端前端前端前端前端前端前端前端前端。
+                </p>
+            </div>
+        </div>
+    </article>
+</main>
+<footer>
+    <div class="footer_line"></div>
+    <p>ife.baidu.com</p>
+</footer>
+</body>
+</html>

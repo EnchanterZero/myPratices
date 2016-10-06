@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>移动端页面</title>
+    <style>
+        /*global*/
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        p{
+            margin: 0;
+        }
+        /*header*/
+        header {
+            display: flex;
+            align-items: center;
+            background-color: #91d4da;
+            width: 100%;
+            min-height: 50px;
+        }
+        header .back {
+            width: 25%;
+            color: white;
+            font: 100% 黑体;
+            background-color: #91d4da;
+        }
+        header .title {
+            text-align: center;
+            width: 50%;
+            color: white;
+            margin: auto auto;
+            padding: 1px;
+            font: 125% 黑体;
+            background-color: #91d4da;
+        }
+        header .after {
+            display: block;
+            content: "";
+            width: 25%;
+        }
+
+        /*top nav*/
+        nav .tab{
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            background-color: white;
+        }
+        nav .tab .tab_control{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 18%;
+            min-height: 40px;
+            font: 100% 黑体;
+            color: black;
+            border-bottom: 3px none #91d4da;
+        }
+
+        nav .tab .tab_now{
+            border-bottom: 3px solid #91d4da;
+        }
+        nav .tab .tab_content{
+            width: 100%;
+            margin-bottom: 5px;
+        }
+        nav .tab .tab_content img{
+            width: 100%;
+        }
+        nav .bar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 5%;
+        }
+        nav .bar_middle{
+            border-bottom: 3px solid #cfcfcf;
+        }
+        nav .bar_middle .bar_item{
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            width: 14%;
+        }
+        nav .bar_middle img{
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            width: 100%;
+            border-radius: 50%;
+        }
+        nav .bar_middle p{
+            margin: 12px auto;
+            font: 80% 黑体;
+        }
+        nav .bar_bottom {
+            align-items: stretch;
+        }
+        nav .bar_bottom .bar_item{
+            padding: 8px 0;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            width: 31%;
+        }
+        nav .bar_bottom img{
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            width: 80%;
+        }
+        nav .bar_bottom .separate_line{
+            width: 3px;
+            height: 145px;
+            background-color: #cfcfcf;
+
+        }
+        nav .bar_bottom .title {
+            margin: 12px auto 5px auto;
+            font: 125% 黑体;
+        }
+        nav .bar_bottom .small_title{
+            font: 75% 黑体;
+            color: #5c5c5c;
+        }
+        .separate_line{
+            background-color: #cfcfcf;
+            height: 10px;
+        }
+        section {
+            padding: 10px 5%;
+        }
+        section .title {
+            font: 125% 黑体;
+            padding: 5px 0 8px 0;
+            border-bottom: 3px solid #cfcfcf;
+            margin-bottom: 5px;
+        }
+        section .section {
+            display: flex;
+            justify-content: flex-start;
+            margin: 5% auto;
+            width: 100%;
+        }
+        section .section .image {
+            width: 30%;
+            margin-right: 5%;
+        }
+        section .section img {
+            max-width: 100%;
+            border: 1px solid #feb834;
+        }
+        section .section .word_block_container{
+            width: 69%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-content: space-between;
+            align-items: center;
+        }
+        section .section .word_block{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 46%;
+            height: 40px;
+            background-color: #e1e1e1;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <p class="back">《-返回</p>
+    <p class="title">这是标题</p>
+    <div class="after"></div>
+</header>
+<nav>
+    <div class="tab">
+        <div class="tab_control"><p>导航</p></div>
+        <div class="tab_control tab_now"><p>导航</p></div>
+        <div class="tab_control"><p>导航</p></div>
+        <div class="tab_control"><p>导航</p></div>
+        <div class="tab_control"><p>导航</p></div>
+        <div class="tab_content">
+            <img src="../public/20150919170714_dsEhj.gif" />
+        </div>
+    </div>
+    <div class="bar bar_middle">
+        <div class="bar_item">
+            <img src="../public/game_booster.png"/>
+            <p>标签</p>
+        </div>
+        <div class="bar_item">
+            <img src="../public/game_booster.png"/>
+            <p>标签</p>
+        </div>
+        <div class="bar_item">
+            <img src="../public/game_booster.png"/>
+            <p>标签</p>
+        </div>
+        <div class="bar_item">
+            <img src="../public/game_booster.png"/>
+            <p>标签</p>
+        </div>
+        <div class="bar_item">
+            <img src="../public/game_booster.png"/>
+            <p>标签</p>
+        </div>
+    </div>
+    <div class="bar bar_bottom">
+        <div class="bar_item">
+            <img src="../public/going_to_sky.png"/>
+            <p class="title">分栏一</p>
+            <p class="small_title">分栏小标题</p>
+        </div>
+        <div class="separate_line"></div>
+        <div class="bar_item">
+            <img src="../public/going_to_sky.png"/>
+            <p class="title">分栏二</p>
+            <p class="small_title">分栏小标题</p>
+        </div>
+        <div class="separate_line"></div>
+        <div class="bar_item">
+            <img src="../public/going_to_sky.png"/>
+            <p class="title">分栏三</p>
+            <p class="small_title">分栏小标题</p>
+        </div>
+    </div>
+</nav>
+<article>
+    <div class="separate_line"></div>
+    <section>
+        <p class="title">模块一</p>
+        <div class="section">
+            <div class="image"><img src="../public/got_no_duixiang.jpg" /></div>
+            <div class="word_block_container">
+                <div class="word_block"><p>这是文案</p></div>
+                <div class="word_block"><p>这是文案</p></div>
+                <div class="word_block"><p>这是文案</p></div>
+                <div class="word_block"><p>这是文案</p></div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="image"><img src="../public/got_no_duixiang.jpg" /></div>
+            <div class="word_block_container">
+                <div class="word_block"><p>这是文案</p></div>
+                <div class="word_block"><p>这是文案</p></div>
+                <div class="word_block"><p>这是文案</p></div>
+                <div class="word_block"><p>这是文案</p></div>
+            </div>
+        </div>
+    </section>
+    <div class="separate_line"></div>
+    <section>
+        <p class="title">模块二</p>
+        <div class="section">
+            <div class="image"><img src="../public/got_no_duixiang.jpg" /></div>
+            <div class="word_block_container">
+                <div class="word_block">这是文案</div>
+                <div class="word_block">这是文案</div>
+                <div class="word_block">这是文案</div>
+                <div class="word_block">这是文案</div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="image"><img src="../public/got_no_duixiang.jpg" /></div>
+            <div class="word_block_container">
+                <div class="word_block">这是文案</div>
+                <div class="word_block">这是文案</div>
+                <div class="word_block">这是文案</div>
+                <div class="word_block">这是文案</div>
+            </div>
+        </div>
+    </section>
+    <div class="separate_line"></div>
+    <section>123</section>
+</article>
+<footer></footer>
+</body>
+</html>

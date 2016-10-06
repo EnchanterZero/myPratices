@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<head>
+    <!--article 绝对定位，top left设置50%，再margin top 和 left 负值的高和宽一半，article即可居中
+        里面的小黄球是div设置了border-radius，再绝对定位到左上和右下。父元素设置overflow hidden即可。
+        -->
+    <style>
+        body {
+            margin: 0;
+            font-family: 微软雅黑;
+        }
+        article {
+            background-color: #ccc;
+            position: absolute;
+            width: 400px;
+            height: 200px;
+            /*这是一种方式*/
+            top: 50%;
+            left: 50%;
+            margin-left: -200px;
+            margin-top: -100px;
+            /*这是另一种方式*/
+            /*
+            margin: auto;
+            top: 0; left: 0; bottom: 0; right: 0;
+            */
+            overflow: hidden;
+        }
+
+        .yellow_round{
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        #left_top{
+            top: -50px;
+            left: -50px;
+        }
+
+        #right_bottom{
+            bottom: -50px;
+            right: -50px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>task4-垂直水平居中</title>
+</head>
+<body>
+<header></header>
+<article>
+    <div id="left_top" class="yellow_round">
+
+    </div>
+    <div id="right_bottom" class="yellow_round">
+
+    </div>
+</article>
+
+<footer></footer>
+</body>
+</html>

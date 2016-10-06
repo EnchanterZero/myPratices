@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<head>
+    <!--
+任务目标
+掌握HTML/CSS布局的概念
+掌握盒模型的概念
+掌握position与float的概念以及在布局时的用法
+
+任务描述
+使用 HTML 与 CSS 按照 示例图（点击查看） 实现三栏式布局。
+左右两栏宽度固定，中间一栏根据父元素宽度填充满，最外面的框应理解为浏览器。背景色为 #eee 区域的高度取决于三个子元素中最高的高度。
+
+任务注意事项
+尝试 position 和 float 的效果，思考它们的异同和应用场景。
+注意测试不同情况，尤其是极端情况下的效果。
+图片和文字内容请自行替换，尽可能体现团队的特色。
+调节浏览器宽度，固定宽度和自适应宽度的效果始终符合预期。
+改变中间一栏的内容长度，以确保在中间一栏较高和右边一栏较高时，父元素的高度始终为子元素中最高的高度。
+其他效果图中给出的标识均被正确地实现。-->
+    <style>
+        * {
+            padding: 20px;
+        }
+
+        body {
+            background-color: gainsboro;
+            margin: 0;
+            font-family: 微软雅黑;
+        }
+
+        section {
+            position: relative;
+            margin: 0px auto 20px auto;
+            background-color: white;
+            box-shadow: 5px 5px 8px;
+        }
+
+        section:after {
+            display: block;
+            content: "";
+            visibility: hidden;
+            height: 0;
+            clear: both;
+        }
+
+        .user_box1 {
+            border: 1px solid black;
+            width: 160px;
+            background-color: #604bff;
+            float: left;
+        }
+
+        .comments1 {
+            border: 1px solid black;
+            margin: 0 140px 0 220px;
+            background-color: #00B7FF;
+        }
+
+        .selections1 {
+            border: 1px solid black;
+            float: right;
+            width: 80px;
+            background-color: aquamarine;
+            padding-bottom: 0;
+        }
+
+        .user_box2 {
+            border: 1px solid black;
+            width: 160px;
+            background-color: #604bff;
+            position: absolute;
+            top: 123px;
+            left: 20px;
+        }
+
+        .comments2 {
+            border: 1px solid black;
+            margin: 0 140px 0 220px;
+            background-color: #00B7FF;
+        }
+
+        .selections2 {
+            border: 1px solid black;
+            float: right;
+            width: 80px;
+            background-color: aquamarine;
+            padding-bottom: 0;
+            position: absolute;
+            top: 123px;
+            right: 20px;
+        }
+
+        .user_box1 img, .user_box2 img {
+            padding: 0;
+            height: 80px;
+            width: 80px;
+        }
+
+        .selections1 img, .selections2 img {
+            margin-bottom: 20px;
+            padding: 0;
+            height: 80px;
+            width: 80px;
+        }
+
+
+    </style>
+    <meta charset="UTF-8">
+    <title>task3-三列布局</title>
+</head>
+<body>
+<header></header>
+<section>
+    <h4>使用float布局：左div float left，右div float left，中间div设置margin</h4>
+    <!--布局为“左右中”，而非“左中右”。
+    因为在渲染时，左先脱离文档流，然后中占用空间，接下来右在float时，会基于在中的下一行进行float(因为中是块级元素)。
+    -->
+    <div class="user_box1">
+        <img src="../public/game_booster.png" alt="avatar">
+    </div>
+    <div class="selections1">
+        <img src="../public/game_booster.png" alt="select"/>
+        <img src="../public/game_booster.png" alt="select"/>
+        <img src="../public/game_booster.png" alt="select"/>
+        <img src="../public/game_booster.png" alt="select"/>
+    </div>
+    <div class="comments1">
+        To Sherlock Holmes she is always THE woman. I have seldom heard
+        him mention her under any other name. In his eyes she eclipses
+        and predominates the whole of her sex. It was not that he felt
+        any emotion akin to love for Irene Adler. All emotions, and that
+        one particularly, were abhorrent to his cold, precise but
+        admirably balanced mind. He was, I take it, the most perfect
+        reasoning and observing machine that the world has seen, but as a
+        lover he would have placed himself in a false position. He never
+        spoke of the softer passions, save with a gibe and a sneer. They
+        were admirable things for the observer--excellent for drawing the
+        veil from men's motives and actions. But for the trained reasoner
+        to admit such intrusions into his own delicate and finely
+        adjusted temperament was to introduce a distracting factor which
+        might throw a doubt upon all his mental results. Grit in a
+        sensitive instrument, or a crack in one of his own high-power
+        lenses, would not be more disturbing than a strong emotion in a
+        nature such as his. And yet there was but one woman to him, and
+        that woman was the late Irene Adler, of dubious and questionable
+        memory.
+    </div>
+</section>
+<section style="overflow: auto">
+    <h4>使用position布局：左div绝对定位于左，右div绝对定位于右，中间div设置margin</h4>
+    <!--布局为“左右中”，而非“左中右”。
+    因为在渲染时，左先脱离文档流，然后中占用空间，接下来右在float时，会基于在中的下一行进行float(因为中是块级元素)。
+    -->
+    <div class="user_box2">
+        <img src="../public/game_booster.png" alt="avatar">
+    </div>
+    <div class="selections2">
+        <img src="../public/game_booster.png" alt="select"/>
+        <img src="../public/game_booster.png" alt="select"/>
+        <img src="../public/game_booster.png" alt="select"/>
+        <img src="../public/game_booster.png" alt="select"/>
+    </div>
+    <div class="comments2">
+        To Sherlock Holmes she is always THE woman. I have seldom heard
+        him mention her under any other name. In his eyes she eclipses
+        and predominates the whole of her sex. It was not that he felt
+        any emotion akin to love for Irene Adler. All emotions, and that
+        one particularly, were abhorrent to his cold, precise but
+        admirably balanced mind. He was, I take it, the most perfect
+        reasoning and observing machine that the world has seen, but as a
+        lover he would have placed himself in a false position. He never
+        spoke of the softer passions, save with a gibe and a sneer. They
+        were admirable things for the observer--excellent for drawing the
+        veil from men's motives and actions. But for the trained reasoner
+        to admit such intrusions into his own delicate and finely
+        adjusted temperament was to introduce a distracting factor which
+        might throw a doubt upon all his mental results. Grit in a
+        sensitive instrument, or a crack in one of his own high-power
+        lenses, would not be more disturbing than a strong emotion in a
+        nature such as his. And yet there was but one woman to him, and
+        that woman was the late Irene Adler, of dubious and questionable
+        memory.
+    </div>
+</section>
+<footer></footer>
+</body>
+</html>

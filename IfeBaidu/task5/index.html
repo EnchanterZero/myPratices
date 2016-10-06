@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>task5</title>
+    <!--
+    基于第一个任务“零基础HTML编码”的代码，参考 示例图（点击查看），在步骤一的代码基础上增加CSS样式代码的编写
+头部和底部的黑色区域始终是100%宽
+页面右侧部分为固定宽度，左侧保持与浏览器窗口变化同步自适应变化
+左侧的各个模块里面的内容宽度跟随左侧整体宽度同步自适应变化
+10张图片需要永远都完整展现，所以会随着宽度变窄，从两行变成三行甚至更多，也有可能随着宽度变宽，变成一行
+    -->
+    <style>
+        body {
+            background-color: gainsboro;
+            padding: 0;
+            margin: 0;
+            font-family: 微软雅黑;
+        }
+
+        /*header*/
+        header, footer {
+
+            background-color: #262626;
+            height: 70px;
+            padding: 0 10px 0 30px;
+        }
+
+        header img {
+            margin-top: -10px;
+            width: 150px;
+        }
+
+        header ul {
+            margin-top: 25px;
+            float: right;
+        }
+
+        header li {
+            float: left;
+            margin-left: 20px;
+        }
+
+        header li a {
+            font-family: 微软雅黑;
+            font-size: small;
+            text-decoration: none;
+        }
+
+        header li a:link {
+            color: white;
+        }
+
+        header li a:visited {
+            color: grey;
+        }
+
+        .content {
+            margin-left: 20px;
+            margin-right: 410px;
+        }
+        /*article and aside*/
+        article, aside {
+            margin: 20px 20px 0px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 5px 5px 8px;
+        }
+
+        article h2 {
+            font-family: 微软雅黑;
+            font-weight: bold;
+        }
+
+        article h3 {
+            font-family: 微软雅黑;
+            color: grey;
+        }
+
+        article .author {
+            font-family: 微软雅黑;
+            color: grey;
+            font-size: small;
+        }
+
+        article ul {
+            list-style: none;
+        }
+
+        article table {
+            /*给table设置border只会设置到table最外层的边框，正确的做法是给td设置边框*/
+            /*边框合并属性：separate(分开) | collapse（合并） | inherit（继承）*/
+            border-collapse: collapse;
+            font-size: small;
+            width: 100%;
+        }
+
+        article thead {
+            background-color: #3c3c3c;
+            color: white;
+            font-weight: bold;
+        }
+
+        article tfoot {
+            background-color: #8e8e8e;
+            /*字体粗细设置：normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | 继承值*/
+            font-weight: bold;
+        }
+
+        article td {
+            padding: 2px 5px 2px 5px;
+            border: 1px solid grey;
+        }
+        article img{
+            width: 300px;
+        }
+        .img_box {
+            display: inline-block;
+            width: 150px;
+            text-align: center;
+            font-size: small;
+            border: solid gray 1px;
+            margin-top: 15px;
+            padding: 10px 10px 10px 10px;
+        }
+
+        .img_box img {
+            width: inherit;
+        }
+
+        aside {
+            width: 350px;
+            float: right;
+        }
+
+        aside h3 {
+            border-left: 3px solid gray;
+            padding-left: 20px;
+        }
+
+        aside .input_group {
+            font-size: small;
+            font-weight: 600;
+        }
+
+        aside .input_item {
+            margin-bottom: 10px;
+        }
+
+        aside .input_item > label {
+            width: 120px;
+            float: left;
+            text-align: right;
+        }
+
+        aside .input_group p {
+            font-weight: normal;
+            color: #8e8e8e;
+            margin-left: 120px;
+        }
+
+        aside textarea {
+            width: 220px;
+            height: 100px;
+        }
+
+        aside button {
+            width: 100%;
+            height: 50px;
+            font: bolder large "微软雅黑 Light";
+            color: white;
+            background-color: #604bff;
+            border-radius: 10px;
+        }
+
+        /*footer*/
+        footer {
+            background-color: #000000;
+            font-size: small;
+            color: white;
+            padding-top: 5px;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+<header class="top_nav">
+    <img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/logo_white_fe6da1ec.png"/>
+    <ul>
+        <li><a href="#">导航链接1</a></li>
+        <li><a href="#">导航链接2</a></li>
+        <li><a href="#">导航链接3</a></li>
+        <li><a href="#">导航链接4</a></li>
+    </ul>
+</header>
+<aside>
+    <h3>这里以后是侧栏，这是侧栏标题</h3>
+    <div class="input_group class1">
+        <div class="input_item">
+            <label>请输入邮箱：</label>
+            <div class="input_area">
+                <input type="text" placeholder="这是一个文本输入框" value="这是一个文本输入框">
+                <p>邮箱地址请按格式输入</p>
+            </div>
+        </div>
+        <div class="input_item">
+            <label>请输入密码：</label>
+            <input type="password" placeholder="这是一个密码输入框" value="1234567890">
+        </div>
+        <div class="input_item">
+            <label>请重复输入密码：</label>
+            <div class="input_area">
+                <input type="password" placeholder="这是一个密码输入框" value="1234567890">
+                <p>密码请为6-16位英文数字</p>
+            </div>
+        </div>
+
+        <div class="input_item">
+            <label>性别：</label>
+            <div class="input_area">
+                <input type="radio" id="r1" name="sex" value="男" checked/> <label for="r1">男</label>
+                <input type="radio" id="r2" name="sex" value="女"/> <label for="r2">女</label>
+            </div>
+        </div>
+        <div class="input_item">
+            <label>城市：</label>
+            <select>
+                <option selected>Beijing
+                <option>Bananas
+                <option>Cherries
+            </select>
+        </div>
+        <div class="input_item">
+            <label>爱好：</label>
+            <div class="input_area">
+                <input type="checkbox"/> <label for="r1">运动</label>
+                <input type="checkbox"/> <label for="r1">艺术</label>
+                <input type="checkbox"/> <label for="r1">科学</label>
+            </div>
+        </div>
+        <div class="input_item">
+            <label>个人描述：</label>
+            <div class="input_area">
+                <textarea>这是一个多行输入框，输入您的个人描述</textarea>
+            </div>
+        </div>
+    </div>
+    <button>确认提交</button>
+</aside>
+<div class="content">
+    <article>
+        <h2>文章一级标题</h2>
+        <h3>文章二级标题</h3>
+        <p class="author">文章作者 文章发表时间</p>
+        <p>这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，换行</p>
+        <p>这是又一个段落，这是又一个段落，这是又一个段落，这是又一个段落，这是又一个段落，这是又一个段落，这是又一个段落，这是又一个段落，换行</p>
+        <p>这还是一个段落，这还是一个段落，这还是一个段落，这还是一个段落，<a
+                href="http://ife.baidu.com">这里有段连接</a>这还是一个段落，这还是一个段落，这还是一个段落，<strong>这里是粗体字</strong>，这还是一个段落，这还是一个段落，这还是一个段落，这还是一个段落，这还是一个段落，这还是一个段落，这还是一个段落，
+        </p>
+        <img src="../public/20150919170714_dsEhj.gif"/>
+        <p>这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，换行</p>
+        <p>这是又一个段落，这是又一个段落，这是又一个段落，这是又一个段落，这是又一个段落，这是又一个段落，这是又一个段落，这是又一个段落，换行</p>
+        <p>这还是一个段落，这还是一个段落，这还是一个段落，这还是一个段落，<a
+                href="http://ife.baidu.com">这里有段连接</a>这还是一个段落，这还是一个段落，这还是一个段落，<strong>这里是粗体字</strong>，这还是一个段落，这还是一个段落，这还是一个段落，这还是一个段落，这还是一个段落，这还是一个段落，这还是一个段落，
+        </p>
+    </article>
+    <article>
+        <h2>另一篇文章一级标题</h2>
+        <h3>文章二级标题</h3>
+        <p class="author">文章作者 文章发表时间</p>
+        <p>这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，这是一个段落，换行</p><br/>
+        <p>这是又一个段落，这是又一个段落，这是又一个段落，这是又一个段落，这是又一个段落，这是又一个段落，这是又一个段落，这是又一个段落，换行</p><br/>
+        <p>这还是一个段落，这还是一个段落，这还是一个段落，这还是一个段落，<a
+                href="http://ife.baidu.com"
+                target="_blank">这里有个连接可以打开新窗口</a>这还是一个段落，这还是一个段落，这还是一个段落，<strong>这里是粗体字</strong>，这还是一个段落，这还是一个段落，这还是一个段落，这还是一个段落，这还是一个段落，这还是一个段落，这还是一个段落，
+        </p>
+        <img src="../public/20150919170714_dsEhj.gif"/>
+        <ul>
+            <li>列表项目1</li>
+            <li>列表项目2</li>
+            <li>列表项目3</li>
+            <li>列表项目4</li>
+        </ul>
+    </article>
+    <article>
+        <h2>图片</h2>
+        <div class="img_box">
+            <p>好看的图片</p>
+            <img src="../public/20150919170714_dsEhj.gif"/><br/>
+        </div>
+        <div class="img_box">
+            <p>好看的图片</p>
+            <img src="../public/20150919170714_dsEhj.gif"/><br/>
+        </div>
+        <div class="img_box">
+            <p>好看的图片</p>
+            <img src="../public/20150919170714_dsEhj.gif"/><br/>
+        </div>
+        <div class="img_box">
+            <p>好看的图片</p>
+            <img src="../public/20150919170714_dsEhj.gif"/><br/>
+        </div>
+    </article>
+    <article>
+        <h2>最后一篇文章一级标题</h2>
+        <h3>文章二级标题</h3>
+        <p class="author">文章作者 文章发表时间</p>
+        <ol>
+            <li>排名1</li>
+            <li>排名2</li>
+            <li>排名3</li>
+        </ol>
+        <h2>下面是一个表格，给表格加一个border="1"好让你看出是表格</h2>
+        <table>
+            <thead>
+            <tr>
+                <td>表头</td>
+                <td>表头</td>
+                <td>表头</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>表内容单元格</td>
+                <td>表内容单元格</td>
+                <td><a href="#">操作</a></td>
+            </tr>
+            <tr>
+                <td>表内容单元格</td>
+                <td>表内容单元格</td>
+                <td><a href="#">操作</a></td>
+            </tr>
+            <tr>
+                <td>表内容单元格</td>
+                <td>表内容单元格</td>
+                <td><a href="#">操作</a></td>
+            </tr>
+            <tr>
+                <td>表内容单元格</td>
+                <td>表内容单元格</td>
+                <td><a href="#">操作</a></td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td class="">总计</td>
+                <td colspan="2">1000</td>
+            </tr>
+            </tfoot>
+        </table>
+    </article>
+</div>
+
+<footer>
+    <p>版权所有@</p>
+</footer>
+</body>
+<script>
+    window.onload = function () {
+        //alert(123);
+        document.getElementsByClassName('input_group')[0].children[1].setAttribute("style", "color:red;");
+    };
+</script>
+</html>
